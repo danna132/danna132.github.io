@@ -9,7 +9,9 @@ img{
   border-radius:50%;
   object-fit:cover;
   float:right;
+  margin-left:30px;
+  margin-bottom:30px
   }
   img:hover{
-    transform:scale(1);
+    transform:scale(1.1);
   }
