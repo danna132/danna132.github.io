@@ -50,15 +50,15 @@ body{
     height:100%;
     z-index:10;
   }
-  .interactive-item{
+  .interactive_item{
  position:absolute;
     cursor:pointer;
     transition:transform 0.4s cubic-bezier(0.25,0.8,0.25,1),filter 0.4s ease;
   }
-  .interactive-item{
+  .interactive_item{
   filter:drop-shadow(0px 5px 15px rgba(255,255,255,0.6));
   }
-.interactive-item.zoomed {
+.interactive_item.zoomed {
     transform: scale(1.6);
     z-index: 999;
     filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.4));
