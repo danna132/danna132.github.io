@@ -18,26 +18,7 @@ $(document).ready(function() {
         $el.ripples('drop', x, y, dropRadius, strength);
     }, 1500); // 每隔 1500 毫秒（1.5秒）执行一次上面的代码
 
-    // ==========================================
-    // 模块 2：批量生产花瓣
-    // ==========================================
-    const petalContainer = document.getElementById('petal_container'); // 拿到那个用来装花瓣的空盒子
-    const petalCount = 15; // 我们决定要生成 15 片花瓣
 
-    for (let i = 0; i < petalCount; i++) { // 循环 15 次
-        const petal = document.createElement('img'); // 每次循环创建一个 img 标签
-        petal.src = 'images/petal.png'; // 给这个标签赋予花瓣的图片路径
-        petal.classList.add('petal'); // 给这个标签加上 .petal 的 CSS 类名（这样它就有下落动画了）
-        
-        // 下面的代码是为了让每片花瓣都长得不一样，飘落轨迹随机
-        petal.style.left = Math.random() * 100 + 'vw'; // 随机横向位置（0到100vw，分布在屏幕各个水平位置）
-        petal.style.width = (Math.random() * 20 + 15) + 'px'; // 随机宽度在 15px 到 35px 之间
-        petal.style.animationDuration = (Math.random() * 5 + 6) + 's'; // 随机下落时间在 6秒 到 11秒 之间
-        petal.style.animationDelay = Math.random() * 5 + 's'; // 随机延迟出现（0到5秒），防止所有花瓣同一时间出发
-        petal.style.opacity = Math.random() * 0.5 + 0.5; // 随机透明度（0.5到1），有的模糊有的清晰
-
-        petalContainer.appendChild(petal); // 把设置好的花瓣放进盒子里（显示到屏幕上）
-    }
 
     // ==========================================
     // 模块 3：点击物品放大/缩小
